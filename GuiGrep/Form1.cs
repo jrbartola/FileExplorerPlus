@@ -72,23 +72,6 @@ namespace GuiGrep
                 {
                     MessageBox.Show(pathField.Text + " is not a valid directory!");
                 }
-
-
-                /*
-                try
-                {
-                    Uri path = new Uri(Path.GetFullPath(pathField.Text));
-                    fileBrowser.Url = path;
-
-                }catch (Exception ex)
-                {
-                    MessageBox.Show(pathField.Text + " is not a valid path!");
-                    Debug.WriteLine(ex.Message);
-                }*/
-                
-
-                
-                
             }
         }
     }

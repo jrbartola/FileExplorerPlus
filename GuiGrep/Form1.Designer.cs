@@ -96,6 +96,9 @@
             // 
             // fileBrowser
             // 
+            this.fileBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fileBrowser.Location = new System.Drawing.Point(12, 41);
             this.fileBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.fileBrowser.Name = "fileBrowser";
