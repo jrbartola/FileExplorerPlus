@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,6 +51,44 @@ namespace GuiGrep
             if (fileBrowser.CanGoForward)
             {
                 fileBrowser.GoForward();
+            }
+        }
+
+        private void pathField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+                // Try in case the path entered is not valid
+                if (Directory.Exists(pathField.Text))
+                {
+                    Uri path = new Uri(Path.GetFullPath(pathField.Text));
+                    fileBrowser.Url = path;
+                } else if (File.Exists(pathField.Text))
+                {
+                    MessageBox.Show(pathField.Text + " is not a directory!");
+                }
+                else
+                {
+                    MessageBox.Show(pathField.Text + " is not a valid directory!");
+                }
+
+
+                /*
+                try
+                {
+                    Uri path = new Uri(Path.GetFullPath(pathField.Text));
+                    fileBrowser.Url = path;
+
+                }catch (Exception ex)
+                {
+                    MessageBox.Show(pathField.Text + " is not a valid path!");
+                    Debug.WriteLine(ex.Message);
+                }*/
+                
+
+                
+                
             }
         }
     }

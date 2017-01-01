@@ -92,6 +92,7 @@
             this.pathField.Name = "pathField";
             this.pathField.Size = new System.Drawing.Size(382, 20);
             this.pathField.TabIndex = 4;
+            this.pathField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.pathField_KeyDown);
             // 
             // fileBrowser
             // 

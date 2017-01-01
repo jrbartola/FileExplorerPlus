@@ -1,0 +1,9 @@
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\bin\Debug\GuiGrep.exe.config
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\bin\Debug\GuiGrep.exe
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\bin\Debug\GuiGrep.pdb
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\obj\Debug\GuiGrep.GuiGrepForm.resources
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\obj\Debug\GuiGrep.Properties.Resources.resources
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\obj\Debug\FileExplorer.csproj.GenerateResource.Cache
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\obj\Debug\GuiGrep.exe
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\obj\Debug\GuiGrep.pdb
+c:\users\jesse\documents\visual studio 2015\Projects\GuiGrep\GuiGrep\obj\Debug\FileExplorer.csprojResolveAssemblyReference.cache
