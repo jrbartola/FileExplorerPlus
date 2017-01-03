@@ -28,28 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuiGrepForm));
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.backBtn = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
             this.pathLabel = new System.Windows.Forms.Label();
             this.pathField = new System.Windows.Forms.TextBox();
             this.fileBrowser = new System.Windows.Forms.WebBrowser();
+            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "folder.png");
-            this.imageList1.Images.SetKeyName(1, "saveicon.png");
-            this.imageList1.Images.SetKeyName(2, "exploreicon.ico");
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(12, 12);
+            this.backBtn.Location = new System.Drawing.Point(12, 24);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(51, 23);
             this.backBtn.TabIndex = 0;
@@ -59,7 +55,7 @@
             // 
             // nextBtn
             // 
-            this.nextBtn.Location = new System.Drawing.Point(69, 12);
+            this.nextBtn.Location = new System.Drawing.Point(69, 24);
             this.nextBtn.Name = "nextBtn";
             this.nextBtn.Size = new System.Drawing.Size(51, 23);
             this.nextBtn.TabIndex = 1;
@@ -69,7 +65,7 @@
             // 
             // openButton
             // 
-            this.openButton.Location = new System.Drawing.Point(550, 12);
+            this.openButton.Location = new System.Drawing.Point(550, 24);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(68, 23);
             this.openButton.TabIndex = 2;
@@ -80,7 +76,7 @@
             // pathLabel
             // 
             this.pathLabel.AutoSize = true;
-            this.pathLabel.Location = new System.Drawing.Point(124, 17);
+            this.pathLabel.Location = new System.Drawing.Point(124, 29);
             this.pathLabel.Name = "pathLabel";
             this.pathLabel.Size = new System.Drawing.Size(32, 13);
             this.pathLabel.TabIndex = 3;
@@ -88,7 +84,7 @@
             // 
             // pathField
             // 
-            this.pathField.Location = new System.Drawing.Point(162, 14);
+            this.pathField.Location = new System.Drawing.Point(162, 26);
             this.pathField.Name = "pathField";
             this.pathField.Size = new System.Drawing.Size(382, 20);
             this.pathField.TabIndex = 4;
@@ -99,40 +95,93 @@
             this.fileBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fileBrowser.Location = new System.Drawing.Point(12, 41);
+            this.fileBrowser.Location = new System.Drawing.Point(12, 55);
             this.fileBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.fileBrowser.Name = "fileBrowser";
-            this.fileBrowser.Size = new System.Drawing.Size(606, 440);
+            this.fileBrowser.Size = new System.Drawing.Size(606, 517);
             this.fileBrowser.TabIndex = 5;
+            // 
+            // mainMenuStrip
+            // 
+            this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.mainMenuStrip.Name = "mainMenuStrip";
+            this.mainMenuStrip.Size = new System.Drawing.Size(626, 24);
+            this.mainMenuStrip.TabIndex = 6;
+            this.mainMenuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.searchToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "New";
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.searchToolStripMenuItem.Text = "Search";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // GuiGrepForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 493);
+            this.ClientSize = new System.Drawing.Size(626, 584);
             this.Controls.Add(this.fileBrowser);
             this.Controls.Add(this.pathField);
             this.Controls.Add(this.pathLabel);
             this.Controls.Add(this.openButton);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.backBtn);
+            this.Controls.Add(this.mainMenuStrip);
+            this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "GuiGrepForm";
             this.Text = "GUI GREP";
             this.Load += new System.EventHandler(this.GuiGrepForm_Load);
+            this.mainMenuStrip.ResumeLayout(false);
+            this.mainMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button nextBtn;
         private System.Windows.Forms.Button openButton;
         private System.Windows.Forms.Label pathLabel;
         private System.Windows.Forms.TextBox pathField;
         private System.Windows.Forms.WebBrowser fileBrowser;
+        private System.Windows.Forms.MenuStrip mainMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
